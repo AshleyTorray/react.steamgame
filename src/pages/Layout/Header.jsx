@@ -28,9 +28,9 @@ const Header =() => {
                     </a>
                     <div className="menu">
                         <nav className="nav">
-                            <a className = "nav__link"><Link to='../howtostart'><span>How to start</span></Link></a>
-                            <a className = "nav__link"><Link to='../support'><span>Support</span></Link></a>
-                            <a className = "nav__link"><Link to='../rules'><span>Rules</span></Link></a>
+                            <a className = "nav__link" onClick={() => {setIsBuger(!isBuger)}}><Link to='../howtostart'><span>How to start</span></Link></a>
+                            <a className = "nav__link" onClick={() => {setIsBuger(!isBuger)}}><Link to='../support'><span>Support</span></Link></a>
+                            <a className = "nav__link" onClick={() => {setIsBuger(!isBuger)}}><Link to='../rules'><span>Rules</span></Link></a>
                         </nav>
                         <button className="menu__close" onClick={() => {setIsBuger(!isBuger)}}>
                             <img src={close}/>
