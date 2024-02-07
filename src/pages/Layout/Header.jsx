@@ -9,11 +9,18 @@ import Discord from "../../assets/img/discord.svg";
 import Twitch from "../../assets/img/Twitch.svg";
 import Medium from "../../assets/img/Medium.svg";
 import Youtube from "../../assets/img/Youtube.svg";
+import { setSelectionRange } from "@testing-library/user-event/dist/utils";
+
 
 const Header =() => {
+    const[isBuger, setIsBuger] = useState(false);
 
+    const bugerClick = () =>{
+        setIsBuger(!isBuger);
+    }
     return (
-        <header className="header">
+        <header className={isBuger ? "header _open" : "header"}>
+        {/* <header className="header"> */}
             <div className="container">
                 <div className="header__inner">
                     <a href="/" className="header__logo">
@@ -25,7 +32,7 @@ const Header =() => {
                             <a className = "nav__link"><Link to='../support'><span>Support</span></Link></a>
                             <a className = "nav__link"><Link to='../rules'><span>Rules</span></Link></a>
                         </nav>
-                        <button className="menu__close">
+                        <button className="menu__close" onClick={() => {setIsBuger(!isBuger)}}>
                             <img src={close}/>
                         </button>
                         <div class="socials">
@@ -75,7 +82,7 @@ const Header =() => {
                         <img src={steam} alt=""/>
                         <span>Login <br/> with steam</span>
                     </button>
-                    <button class="burger m-btn m-btn-red">
+                    <button class="burger m-btn m-btn-red" onClick={bugerClick}>
                         <img src={burger} alt=""/>
                     </button>
                 </div>

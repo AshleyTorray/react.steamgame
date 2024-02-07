@@ -11,7 +11,7 @@ const Footer = () => {
             <div class="container">
                 <div class="footer__inner">
                     <div class="socials">
-                        <a href="" class="socials__item">
+                        <a href="/" class="socials__item">
                             <span class="socials__icon">
                                 <img src={X} alt=""/>
                             </span>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Bg from "../../assets/img/bg.svg";
 import Bg2 from "../../assets/img/bg2.svg";
 import Play from "../../assets/img/let-play.svg";
@@ -25,7 +26,7 @@ const LetPlay = () => {
                                 <div class="text20 text18-tablet">Play Rust on Scrapfrontier.com, where gameplay rewards you with SCRP. Use your earnings to enhance your pass, unlocking even greater SCRP gains. Dive into a cycle of play, earn, and upgrade for maximum rewards.</div>
                             </div>
                             <div class="let-play__desc">
-                                <div class="text20 text18-tablet">Find out how to get started in <a href="how-start.html">How to start</a></div>
+                                <div class="text20 text18-tablet">Find out how to get started in <Link to='/howtostart'>How to start</Link></div>
                             </div>
                         </div>
                     </div>
